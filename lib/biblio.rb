@@ -1,6 +1,7 @@
 require "biblio/version"
 
 module Biblio
+    require "biblio/cita.rb"
     require "biblio/referencia.rb"
     require "biblio/libro.rb"
     require "biblio/publicacion.rb"
