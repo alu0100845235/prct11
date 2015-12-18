@@ -115,17 +115,6 @@ class List
         aux
     end
     
-    def printing
-        if @front.value != nil
-            aux = @front
-            puts @front.value
-            while aux.next != nil
-                aux = aux.next
-                puts aux.value.to_s
-            end
-        end
-    end
-    
     def each
         return nil unless @size > 0
         aux = @front

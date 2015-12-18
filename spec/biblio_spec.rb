@@ -457,6 +457,30 @@ describe Biblio do
         end
     end
     
+    describe "Comprobacion de metodos de periodico" do
+        it "Test metodo to_s (nos devuelve una referencia formateada)" do
+            expect(@p1.to_s).to eq(@p1.to_s)
+            expect(@p2.to_s).to eq(@p2.to_s)
+            expect(@p3.to_s).to eq(@p3.to_s)
+        end
+    end
+    
+    describe "Comprobacion de metodos de revista" do
+        it "Test metodo to_s (nos devuelve una referencia formateada)" do
+            expect(@r1.to_s).to eq(@r1.to_s)
+            expect(@r2.to_s).to eq(@r2.to_s)
+            expect(@r3.to_s).to eq(@r3.to_s)
+        end
+    end
+    
+    describe "Comprobacion de metodos de edocumento" do
+        it "Test metodo to_s (nos devuelve una referencia formateada)" do
+            expect(@e1.to_s).to eq(@e1.to_s)
+            expect(@e2.to_s).to eq(@e2.to_s)
+            expect(@e3.to_s).to eq(@e3.to_s)
+        end
+    end
+    
     describe "Lanzamiento de errores al construir Libro" do
       it "Debe haber un autor" do
           expect { Libro.new(nil, "titulo", "serie", "editorial", 1, "1-1-1991", ["isbn1", "isbn2"]) }.to raise_error(ArgumentError)
@@ -523,6 +547,11 @@ describe Biblio do
         it "Se extrae el ultimo elemento de la lista" do
             expect(@l1.pop_back).to eq(nil)
             expect(@l2.pop_back).to eq(@b1)
+            
+            @l1.push_back(@b1)
+            @l1.push_back(@b2)
+            expect(@l1.pop_back).to eq(@b2)
+            expect(@l1.pop_back).to eq(@b1)
         end
         it "Se inserta un elemento a la lista" do
             @l1.insert(0, @b1)
@@ -535,6 +564,12 @@ describe Biblio do
             expect(@l1.get_pos(1).value).to eq(@b2)
             @l1.insert(2, @b3)
             expect(@l1.get_pos(2).value).to eq(@b3)
+            @l1.insert(0, @b3)
+            expect(@l1.front.value).to eq(@b3)
+            @l1.insert(1, @b1)
+            expect(@l1.get_pos(1).value).to eq(@b1)
+
+            expect(@l1.get_pos(100)).to eq(nil)
         end
     end
     
