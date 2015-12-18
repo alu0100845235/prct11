@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["alu0100845235"]
   spec.email         = ["alu0100845235@ull.edu.es"]
 
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "Set to 'http://mygemserver.com' to prevent pushes to rubygems.org, or delete to allow pushes to any server."
-  end
+  #if spec.respond_to?(:metadata)
+  #  spec.metadata['allowed_push_host'] = "Set to 'http://mygemserver.com' to prevent pushes to rubygems.org, or delete to allow pushes to any server."
+  #end
 
   spec.summary       = "Practica LPP de la ULL creancion Bibliografia"
   spec.description   = "es crear y ordenar todas tus referencias bibliograficas"
