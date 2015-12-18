@@ -5,9 +5,15 @@ class Referencia
     include Comparable
     attr_accessor :autores, :title, :editor, :date_p, :sufijo
     
-    def initialize
+    def initialize(&block)
         @autores = []
-        yield self if block_given?
+        if block_given?  
+          if block.arity == 1
+            yield self
+          else
+           instance_eval &block 
+          end
+        end
     end
     
     def autor(name)

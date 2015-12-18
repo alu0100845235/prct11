@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'biblio/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "biblio"
+  spec.name          = "biblio_alu0100845235"
   spec.version       = Biblio::VERSION
   spec.authors       = ["alu0100845235"]
   spec.email         = ["alu0100845235@ull.edu.es"]
@@ -14,8 +14,8 @@ Gem::Specification.new do |spec|
   end
 
   spec.summary       = "Practica LPP de la ULL creancion Bibliografia"
-  spec.description   = "Puedes crear y ordenar todas tus referencias bibliograficas"
-  spec.homepage      = "http://rubygems.org/gems/bibliografia"
+  spec.description   = "es crear y ordenar todas tus referencias bibliograficas"
+  spec.homepage      = "http://rubygems.org/gems/"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }

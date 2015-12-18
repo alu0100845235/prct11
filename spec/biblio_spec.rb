@@ -3,17 +3,17 @@ require 'spec_helper'
 
 describe Biblio do
     before :each do
-        @b1 = Libro.new{ |r|
-            r.autor "Dave Thomas"
-            r.autor "Andy Hunt"
-            r.autor "Chad Fowler"
-            r.titulo "Programming Ruby 1.9 & 2.0: The Pragmatic Programmers Guide"
-            r.serie "The Facets of Ruby"
-            r.editorial "Pragmatic Bookshelf"
-            r.n_edicion 4
-            r.fecha "07/07/2013"
-            r.isbn "978-1937785499"
-            r.isbn "1937785491"
+        @b1 = Libro.new{
+            autor "Dave Thomas"
+            autor "Andy Hunt"
+            autor "Chad Fowler"
+            titulo "Programming Ruby 1.9 & 2.0: The Pragmatic Programmers Guide"
+            serie "The Facets of Ruby"
+            editorial "Pragmatic Bookshelf"
+            n_edicion 4
+            fecha "07/07/2013"
+            isbn "978-1937785499"
+            isbn "1937785491"
         }
         @b2 = Libro.new{ |r|
             r.autor "Scott Chacon"
