@@ -10,4 +10,8 @@ module Biblio
     require "biblio/edocumento.rb"
     require "biblio/node.rb"
     require "biblio/list.rb"
+    
+    def self.ipsum
+        "Genial"
+    end
 end
