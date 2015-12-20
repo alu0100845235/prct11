@@ -13,7 +13,7 @@ class Cita
     end
     
     def citar(referencia)
-        #raise ArgumentError, "La referencia debe ser del tipo Referencia" unless referencia.is_a?(Referencia)
+        raise ArgumentError, "La referencia debe ser del tipo Referencia" unless referencia.is_a?(Referencia)
         @lista.push_back(referencia)
         
         aux = @lista.sort
